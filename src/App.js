@@ -1,5 +1,7 @@
 import React, { lazy, Suspense } from 'react';
-import './App.css';
+import style from './App.module.css';
+import Button from '@mui/material/Button';
+import './MuiClassNameSetup'
 const Header = lazy(() => import('ExampleRemote/Header'));
 const Footer = lazy(() => import('ExampleRemote/Footer'));
 const Clicker = lazy(() => import('ExampleRemote/Clicker'));
@@ -9,7 +11,8 @@ function App() {
   const [hostState, setHostState] = React.useState(0);
 
   return (
-    <div className="App">
+    <div className={style.App}>
+      <Button variant="contained">Exaple host</Button>
       <Suspense fallback={<div>Ładowanie Headera...</div>}>
         <Header />
       </Suspense>
