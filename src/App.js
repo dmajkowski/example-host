@@ -14,7 +14,7 @@ function App() {
         <Header />
       </Suspense>
       <p>
-        Host App - {hostState}
+        Host App changed - {hostState}
       </p>
       <Suspense fallback={<div>Ładowanie Clickera...</div>}>
         <Clicker hostState={hostState} setHostState={setHostState}/>
